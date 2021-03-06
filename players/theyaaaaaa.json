@@ -1,0 +1,92 @@
+[
+  {
+    "playlist": "Un-Ranked",
+    "mmr": "1,447",
+    "rank": "Unranked Division I",
+    "matches": "N/A",
+    "winStreak": 0,
+    "lossStreak": 0,
+    "ranking": "#1 088 078 • Top 16%",
+    "change": { "changeUp": null, "changeDown": null }
+  },
+  {
+    "playlist": "Ranked Duel 1v1",
+    "mmr": "886",
+    "rank": "Diamond II Division II",
+    "matches": 12,
+    "winStreak": 0,
+    "lossStreak": 1,
+    "ranking": "#544 484 • Top 11%",
+    "change": { "changeUp": "12", "changeDown": "7" }
+  },
+  {
+    "playlist": "Ranked Doubles 2v2",
+    "mmr": "959",
+    "rank": "Diamond I Division II",
+    "matches": 46,
+    "winStreak": 2,
+    "lossStreak": 0,
+    "ranking": "#1 325 356 • Top 20%",
+    "change": { "changeUp": "9", "changeDown": "15" }
+  },
+  {
+    "playlist": "Ranked Standard 3v3",
+    "mmr": "1,029",
+    "rank": "Diamond I Division IV",
+    "matches": 112,
+    "winStreak": 1,
+    "lossStreak": 0,
+    "ranking": "#658 134 • Top 11%",
+    "change": { "changeUp": "9", "changeDown": "22" }
+  },
+  {
+    "playlist": "Hoops",
+    "mmr": "852",
+    "rank": "Diamond I Division III",
+    "matches": 13,
+    "winStreak": 2,
+    "lossStreak": 0,
+    "ranking": "#252 892 • Top 6%",
+    "change": { "changeUp": "5", "changeDown": "14" }
+  },
+  {
+    "playlist": "Rumble",
+    "mmr": "844",
+    "rank": "Diamond I Division III",
+    "matches": 16,
+    "winStreak": 0,
+    "lossStreak": 1,
+    "ranking": "#758 180 • Top 15%",
+    "change": { "changeUp": "13", "changeDown": "6" }
+  },
+  {
+    "playlist": "Dropshot",
+    "mmr": "780",
+    "rank": "Diamond I Division II",
+    "matches": 18,
+    "winStreak": 0,
+    "lossStreak": 1,
+    "ranking": "#434 619 • Top 10%",
+    "change": { "changeUp": "18", "changeDown": "1" }
+  },
+  {
+    "playlist": "Snowday",
+    "mmr": "938",
+    "rank": "Diamond III Division I",
+    "matches": 15,
+    "winStreak": 6,
+    "lossStreak": 0,
+    "ranking": "#61 112 • Top 1.4%",
+    "change": { "changeUp": "1", "changeDown": "10" }
+  },
+  {
+    "playlist": "Tournament Matches",
+    "mmr": "1,023",
+    "rank": "Diamond II Division I",
+    "matches": 42,
+    "winStreak": 0,
+    "lossStreak": 2,
+    "ranking": "#669 276 • Top 18%",
+    "change": { "changeUp": "26", "changeDown": "3" }
+  }
+]
