@@ -1,71 +1,15 @@
-const puppeteer = require("puppeteer");
-const fs = require("fs");
+const fetchInfo = require("./fetchInfo.js");
+const getUser = require("./getUser.js");
+
+const platformList = ['steam', 'epic', 'xbl', 'psn', 'switch']
+
+//theyaaaaaa
 const platform = "steam";
 const id = "theyaaaaaa";
-(async () => {
-  const browser = await puppeteer.launch({ headless: false });
-  const page = await browser.newPage();
-  await page.goto(
-    `https://rocketleague.tracker.network/rocket-league/profile/${platform}/${id}/overview`
-  );
-  await page.waitForSelector(".trn-table");
-  const res = await page.evaluate(() => {
-    let x = [];
-    document
-      .querySelector(".trn-table")
-      .querySelector("tbody")
-      .querySelectorAll("tr")
-      .forEach((e) => {
-        const playlist = e.querySelector(".playlist").innerText;
-        const mmr = e.querySelector(".mmr").innerText;
-        const rank = e.querySelector(".rank").innerText;
-        const ranking = e.querySelector(".rating").querySelector(".rank")
-          .innerText;
-        let changeUp = e.querySelector(".up")
-          ? e.querySelector(".up").innerText
-          : null;
-        let changeDown = e.querySelector(".down")
-          ? e.querySelector(".down").innerText
-          : null;
 
-        let matches = e.querySelector(".matches").innerText;
+async function init() {
+  const x = await getUser(platform, id);
+  console.log(x);
+}
 
-        let winStreak = 0;
-        let lossStreak = 0;
-
-        if (matches.toLowerCase().includes("win")) {
-          const x = matches.match(/\d+/g);
-          if (x.length == 2) {
-            winStreak = parseInt(x[1]);
-            matches = parseInt(x[0]);
-          }
-        } else if (matches.toLowerCase().includes("loss")) {
-          const x = matches.match(/\d+/g);
-          if (x.length == 2) {
-            lossStreak = parseInt(x[1]);
-            matches = parseInt(x[0]);
-          }
-        }
-
-        x = [
-          ...x,
-          {
-            playlist,
-            mmr,
-            rank,
-            matches,
-            winStreak,
-            lossStreak,
-            ranking,
-            change: {
-              changeUp,
-              changeDown,
-            },
-          },
-        ];
-      });
-    return x;
-  });
-  fs.writeFileSync("./players/" + id + ".json", JSON.stringify(res));
-  browser.close();
-})();
+init()
