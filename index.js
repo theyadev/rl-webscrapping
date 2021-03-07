@@ -12,10 +12,18 @@ async function init() {
   const platform = prompt(
     "What platform? (" + platformList.join(", ") + ") : "
   );
+  if (!platform) return;
+  if (!platformList.includes(platform.toLowerCase())) {
+    console.log("Platform is incorrect!".bgRed);
+    return init();
+  }
   const id = prompt("ID: ");
+  if (!id) return;
   const x = await getUser(platform.toLowerCase(), id.toLowerCase());
-  if (x == null) return console.error("User not found.");
-  else {
+  if (x == null) {
+    console.log("User Not Found!".bgRed);
+    return init();
+  } else {
     console.log("------------------------".blue);
     console.log("Username: ".yellow + x.username);
     console.log("------------------------".blue);
