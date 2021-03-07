@@ -5,12 +5,13 @@ const getUser = require("./getUser.js");
 
 const platformList = ["steam", "epic", "xbl", "psn", "switch"];
 
+
 //theyaaaaaa
 //const platform = "steam";
 //const id = "theyaaaaaa";
 async function init() {
   const platform = prompt(
-    "What platform? (" + platformList.join(", ") + ") : "
+    "Platform? (" + platformList.join(", ") + ") : "
   );
   if (!platform) return;
   if (!platformList.includes(platform.toLowerCase())) {
@@ -28,7 +29,7 @@ async function init() {
     console.log("Username: ".yellow + x.username);
     console.log("------------------------".blue);
     x.ranks.forEach((e) => {
-      console.log(e.playlist);
+      console.log("----- " + e.playlist);
       let u = "";
       const rankSplit = e.rank.split(" ")[0];
 
@@ -56,6 +57,7 @@ async function init() {
       console.log("------------------------".blue);
     });
   }
+  init()
 }
 
 init();
