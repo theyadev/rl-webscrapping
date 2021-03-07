@@ -12,7 +12,7 @@ async function init() {
   const platform = prompt(
     "What platform? (" + platformList.join(", ") + ") : "
   );
-  const id = prompt("User Id : ");
+  const id = prompt("ID: ");
   const x = await getUser(platform.toLowerCase(), id.toLowerCase());
   if (x == null) return console.error("User not found.");
   else {
