@@ -73,7 +73,7 @@ module.exports = async function (platform, id) {
   });
   const user = { username: res.username, platform, id, ranks: res.x };
   if (!fs.existsSync("./players")) fs.mkdirSync("./players");
-  fs.writeFileSync("./players/" + id + ".json", JSON.stringify(user));
+  fs.writeFileSync("./players/" + platform + id + ".json", JSON.stringify(user));
   browser.close();
   return user;
 };
